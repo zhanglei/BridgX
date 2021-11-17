@@ -1,0 +1,25 @@
+DebugMode: true #是否处于Debug模式
+ServerPort: 9090
+WriteDB:
+  Name: bridgx_dev
+  Host: 127.0.0.1
+  Port: 3306
+  User: root
+  Password: db@galaxy-future.com
+  Timeout: 50ms
+  ReadTimeout: 800ms
+  WriteTimeout: 800ms
+  MaxIdleConns: 10
+  MaxOpenConns: 30
+
+ReadDB:
+  Name: bridgx_dev
+  Host: 127.0.0.1
+  Port: 3306
+  User: root
+  Password: db@galaxy-future.com
+  Timeout: 50ms
+  ReadTimeout: 60ms
+  WriteTimeout: 60ms
+  MaxIdleConns: 10
+  MaxOpenConns: 30
