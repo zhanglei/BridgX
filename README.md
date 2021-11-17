@@ -26,7 +26,7 @@ BridgX是业界领先的基于全链路Serverless技术的云原生基础架构�
 
 行为准则
 ------
-[贡献者公约](https://www.contributor-covenant.org/zh-cn/version/2/0/code_of_conduct/)
+[贡献者公约](https://github.com/galaxy-future/BridgX/blob/main/CODE_OF_CONDUCT)
 
 #授权
 -----
