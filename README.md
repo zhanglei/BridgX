@@ -51,7 +51,7 @@ http://localhost:8888 可以看到管理控制台界面,初始用户名root和�
 
 
 #### 3、快速上手  
-通过[快速上手指南](https://github.com/galaxy-future/BridgX/blob/main/docs/getting-started.md)，可以掌握基本的快速扩缩容操作流程。  
+通过[快速上手指南](https://github.com/galaxy-future/BridgX/blob/master/docs/getting-started.md)，可以掌握基本的快速扩缩容操作流程。  
 
 
 #### 4、用户手册  
