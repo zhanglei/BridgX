@@ -9,7 +9,7 @@
     <td>POST方法</td>
   </tr>
   <tr>
-    <td>Post /api/v1/cluster/create </td>
+    <td>POST /api/v1/cluster/create </td>
   </tr>
 </table>
 
@@ -327,7 +327,7 @@ PayByTraffic（默认）：按使用流量计费。</td>
 **请求地址**
 <table>
   <tr>
-    <td>Get方法</td>
+    <td>GET方法</td>
   </tr>
   <tr>
     <td>GET /api/v1/cluster/describe_all </td>
@@ -562,7 +562,7 @@ VPC创建后无法修改网段。<br>
     <td>POST方法</td>
   </tr>
   <tr>
-    <td>post /api/v1/vpc/create</td>
+    <td>POST /api/v1/vpc/create</td>
   </tr>
 </table>
 
@@ -981,7 +981,7 @@ Available：可用。</td>
   </tr>
 </table>
 
-***请求参数***
+**请求参数**
 <table>
   <tr>
     <td>名称</td>
@@ -1124,7 +1124,7 @@ Available：可用。</td>
 
 
 ### 6. 查看子网
-来查找子网id信息
+来查找子网id信息<br>
 **请求地址**
 <table>
   <tr>
@@ -1135,8 +1135,6 @@ Available：可用。</td>
   </tr>
 </table>
 
-
-**请求参数**
 **请求参数**
 <table>
   <tr>
@@ -1383,7 +1381,7 @@ false：非默认交换机。</td>
     <td>POST方法</td>
   </tr>
   <tr>
-    <td>Post /api/v1/security_group/create_with_rule </td>
+    <td>POST /api/v1/security_group/create_with_rule </td>
   </tr>
 </table>
 
@@ -1595,15 +1593,15 @@ ingress：入方向</td>
 
 
 ### 8. 查看安全组
-查看已经创建的安全组
+查看已经创建的安全组<br>
 
 **请求地址**
 <table>
   <tr>
-    <td>Get方法</td>
+    <td>GET方法</td>
   </tr>
   <tr>
-    <td>Get /api/v1/security_group/describe </td>
+    <td>GET /api/v1/security_group/describe </td>
   </tr>
 </table>
 
@@ -1686,7 +1684,6 @@ ingress：入方向</td>
 </table>
 
 **data中重要参数**
-**请求参数**
 <table>
   <tr>
     <td>名称</td>
@@ -1823,7 +1820,7 @@ enterprise：企业安全组</td>
 
 
 ### 9. 创建网络配置
-通过一个api即可创建vpc、子网及安全组
+通过一个api即可创建vpc、子网及安全组<br>
 **请求地址**
 <table>
   <tr>
@@ -2052,14 +2049,14 @@ enterprise：企业安全组</td>
 
 
 ### 10. 查看region列表
-查看云厂商的地域列表
+查看云厂商的地域列表<br>
 **请求地址**
 <table>
   <tr>
-    <td>Get方法</td>
+    <td>GET方法</td>
   </tr>
   <tr>
-    <td>Get   /api/v1/region/list </td>
+    <td>GET /api/v1/region/list </td>
   </tr>
 </table>
 
@@ -2176,14 +2173,14 @@ enterprise：企业安全组</td>
 
 
 ### 11. 查看zone列表
-通过云厂商的地域查看该地域下的可用区列表
+通过云厂商的地域查看该地域下的可用区列表<br>
 **请求地址**
 <table>
   <tr>
-    <td>Get方法</td>
+    <td>GET方法</td>
   </tr>
   <tr>
-    <td>Get /api/v1/zone/list</td>
+    <td>GET /api/v1/zone/list</td>
   </tr>
 </table>
 
@@ -2312,15 +2309,15 @@ enterprise：企业安全组</td>
 
 
 ### 12. 查看机型列表
-通过云厂商的地域和可用区查看该地域下及可用区下的机型列表
+通过云厂商的地域和可用区查看该地域下及可用区下的机型列表<br>
 
 **请求地址**
 <table>
   <tr>
-    <td>Get方法</td>
+    <td>GET方法</td>
   </tr>
   <tr>
-    <td>Get /api/v1/instance_type/list</td>
+    <td>GET /api/v1/instance_type/list</td>
   </tr>
 </table>
 
@@ -2505,14 +2502,14 @@ enterprise：企业安全组</td>
 
 
 ### 13. 获取镜像列表
-通过云厂商的地域和可用区查看该地域下及可用区下的机型列表
+通过云厂商的地域和可用区查看该地域下及可用区下的机型列表<br>
 **请求地址**
 <table>
   <tr>
-    <td>Get 方法</td>
+    <td>GET 方法</td>
   </tr>
   <tr>
-    <td>Get /api/v1/image/list</td>
+    <td>GET /api/v1/image/list</td>
   </tr>
 </table>
 
@@ -2678,7 +2675,7 @@ enterprise：企业安全组</td>
 
 ## 扩缩容任务API
 ### 1. 创建扩容任务
-扩大某集群的机器数量
+扩大某集群的机器数量<br>
 
 **请求地址**
 <table>
@@ -2686,7 +2683,7 @@ enterprise：企业安全组</td>
     <td>POST方法</td>
   </tr>
   <tr>
-    <td>post /api/v1/cluster/expand </td>
+    <td>POST /api/v1/cluster/expand </td>
   </tr>
 </table>
 
@@ -2807,7 +2804,7 @@ enterprise：企业安全组</td>
 
 
 ### 2. 创建缩容任务
-缩小某集群的机器数量，如果指定了IP会按照指定IP进行缩容，不指定IP会随机选择count台机器进行缩容。
+缩小某集群的机器数量，如果指定了IP会按照指定IP进行缩容，不指定IP会随机选择count台机器进行缩容。<br>
 **请求地址**
 <table>
   <tr>
@@ -2938,7 +2935,7 @@ enterprise：企业安全组</td>
 
 
 ### 3. 查看任务列表
-查询账号下的任务列表，不传account默认查询全部，传了account查询特定account下的。
+查询账号下的任务列表，不传account默认查询全部，传了account查询特定account下的。<br>
 **请求地址**
 <table>
   <tr>
@@ -3179,7 +3176,7 @@ enterprise：企业安全组</td>
 
 ## 机器API
 ### 1. 机器列表
-获取本账户下所有的机器信息
+获取本账户下所有的机器信息<br>
 **请求地址**
 <table>
   <tr>
@@ -3494,7 +3491,7 @@ enterprise：企业安全组</td>
 
 
 ### 2. 机器详情
-获取某机器的详细信息
+获取某机器的详细信息<br>
 **请求地址**
 <table>
   <tr>
@@ -3551,7 +3548,7 @@ enterprise：企业安全组</td>
     <td>object</td>
     <td>是</td>
     <td>正常信息</td>
-    <td> {}</td>
+    <td>{}</td>
   </tr>
 </table>
 
@@ -3561,6 +3558,8 @@ enterprise：企业安全组</td>
 <table>
   <tr>
     <td>名称</td>
+    <td>子属性</td>
+    <td>孙属性</td>
     <td>类型</td>
     <td>必填</td>
     <td>描述</td>
@@ -3568,6 +3567,8 @@ enterprise：企业安全组</td>
   </tr>
   <tr>
     <td>instance_id</td>
+    <td></td>
+    <td></td>
     <td>String</td>
     <td>是</td>
     <td>机器的id</td>
@@ -3575,6 +3576,8 @@ enterprise：企业安全组</td>
   </tr>
   <tr>
     <td>provider</td>
+    <td></td>
+    <td></td>
     <td>String</td>
     <td>是</td>
     <td>云厂商</td>
@@ -3582,6 +3585,8 @@ enterprise：企业安全组</td>
   </tr>
   <tr>
     <td>region_id</td>
+    <td></td>
+    <td></td>
     <td>String</td>
     <td>是</td>
     <td>可用区</td>
@@ -3589,6 +3594,8 @@ enterprise：企业安全组</td>
   </tr>
   <tr>
     <td>create_at</td>
+    <td></td>
+    <td></td>
     <td>String</td>
     <td>是</td>
     <td>创建时间</td>
@@ -3596,6 +3603,8 @@ enterprise：企业安全组</td>
   </tr>
   <tr>
     <td>image_id</td>
+    <td></td>
+    <td></td>
     <td>String</td>
     <td>是</td>
     <td>镜像id</td>
@@ -3603,114 +3612,148 @@ enterprise：企业安全组</td>
   </tr>
   <tr>
     <td>instance_type</td>
+    <td></td>
+    <td></td>
     <td>String</td>
     <td>是</td>
     <td>实例规格</td>
     <td>4核16G</td>
   </tr>
+  <tr>
+    <td>storage_config</td>
+    <td></td>
+    <td></td>
+    <td>{object}</td>
+    <td>是</td>
+    <td>存储配置</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>system_disk_type</td>
+    <td>String</td>
+    <td>是</td>
+    <td>系统盘类型</td>
+    <td>cloud_efficiency</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>system_disk_size</td>
+    <td></td>
+    <td>String</td>
+    <td>是</td>
+    <td>系统盘大小</td>
+    <td>40G</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>data_disks</td>
+    <td></td>
+    <td>[]</td>
+    <td>否</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>data_disk_type</td>
+    <td>String </td>
+    <td>否</td>
+    <td>数据盘类型</td>
+    <td>cloud_efficiency</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>data_disk_size</td>
+    <td>String </td>
+    <td>否</td>
+    <td>数据盘大小</td>
+    <td>40G</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>data_disk_num</td>
+    <td></td>
+    <td>int</td>
+    <td>是</td>
+    <td>数据盘个数</td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td>network_config</td>
+    <td></td>
+    <td></td>
+    <td>{object}</td>
+    <td>是</td>
+    <td>网络配置</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>vpc_name</td>
+    <td></td>
+    <td>String</td>
+    <td>是</td>
+    <td>VPC的名称</td>
+    <td>testvpc</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>subnet_id_name</td>
+    <td></td>
+    <td>String</td>
+    <td>是</td>
+    <td>子网名字</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>security_group_name</td>
+    <td></td>
+    <td>String</td>
+    <td>是</td>
+    <td>安全组名字</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ip_outer</td>
+    <td></td>
+    <td></td>
+    <td>String</td>
+    <td>是</td>
+    <td>公网ip</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>ip_inner</td>
+    <td></td>
+    <td></td>
+    <td>String</td>
+    <td>是</td>
+    <td>内网ip</td>
+    <td></td>
+  </tr>
 </table>
 
-storage_config
+**请求示例**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>instance_id</td>
+    <td>i-2ze40hb**hrrjk7mi6</td>
+  </tr>
+</table>
 
 
-{object}
-是
-存储配置
+**响应示例**
 
-
-system_disk_type
-
-String
-是
-系统盘类型
-cloud_efficiency
-
-system_disk_size
-
-String
-是
-系统盘大小
-40G
-
-data_disks
-
-[]
-否
-数据盘类型
-cloud_efficiency
-
-
-data_disk_type
-String 
-否
-
-
-
-
-data_disk_size
-String
-否
-数据盘大小
-40G
-
-data_disk_num
-
-int
-是
-数据盘个数
-4
-network_config
-
-
-{object}
-是
-网络配置
-
-
-vpc_name
-
-String
-是
-VPC的名称
-testvpc
-
-subnet_id_name
-
-String
-是
-子网名字
-
-
-security_group_name
-
-String
-是
-安全组名字
-
-ip_outer
-
-
-String
-是
-公网ip
-
-ip_inner
-
-
-String
-是
-内网ip
-
-
-请求示例
-名称
-示例值
-instance_id
-i-2ze40hb**hrrjk7mi6
-
-
-响应示例
 正常返回结果：
+```JSON
 {
     "code":200,
     "data":{
@@ -3741,96 +3784,141 @@ i-2ze40hb**hrrjk7mi6
     },
     "msg":"success"
 }
-
+```
 异常返回结果：
+```JSON
 {
     "code":400,
     "msg":"param_invalid",
     "data":null
 }
-
-返回码解释
-返回码
-状态
-解释
-200
-success
-执行成功
-400
-param_invalid
-参数有误
-
-
-
-
-3. 获取机器数量
-获取本账户下运行的机器数量
-请求地址
-GET方法
-GET /api/v1/instance/num
-
-请求参数
-名称
-类型
-必填
-描述
-示例值
-account
-String
-否
-云账户。
-LTAI5tAWAM
-cluster_name
-string
-否
-集群名称
-测试集群
-
-返回参数
-名称
-类型
-必填
-描述
-示例值
-code
-int
-是
-返回码
- 0
-msg
-string
-是
-错误信息
-null
-data
-object
-是
-正常信息
- {}
-
-data 中的重要参数
-名称
-类型
-必填
-描述
-示例值
-instance_num
-int64
-是
-实例数量
-2
-
-请求示例
-名称
-示例值
-account
-LTAI5tAWAM
-cluster_name
-测试集群
+```
+<table>
+  <tr>
+    <td>返回码</td>
+    <td>状态</td>
+    <td>解释</td>
+  </tr>
+  <tr>
+    <td>200</td>
+    <td>success</td>
+    <td>执行成功</td>
+  </tr>
+  <tr>
+    <td>400</td>
+    <td>param_invalid</td>
+    <td>参数有误</td>
+  </tr>
+</table>
 
 
-响应示例
+### 3. 获取机器数量
+获取本账户下运行的机器数量<br>
+**请求地址**
+<table>
+  <tr>
+    <td>GET方法</td>
+  </tr>
+  <tr>
+    <td>GET /api/v1/instance/num</td>
+  </tr>
+</table>
+
+**请求参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>account</td>
+    <td>String</td>
+    <td>否</td>
+    <td>云账户</td>
+    <td>LTAI5tAWAM</td>
+  </tr>
+  <tr>
+    <td>cluster_name</td>
+    <td>String</td>
+    <td>否</td>
+    <td>集群名称</td>
+    <td>测试集群</td>
+  </tr>
+</table>
+
+**返回参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>code</td>
+    <td>int</td>
+    <td>是</td>
+    <td>返回码</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>msg</td>
+    <td>string</td>
+    <td>是</td>
+    <td>错误信息</td>
+    <td>null</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>object</td>
+    <td>是</td>
+    <td>正常信息</td>
+    <td> {}</td>
+  </tr>
+</table>
+
+**data 中的重要参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>instance_num</td>
+    <td>int64</td>
+    <td>是</td>
+    <td>实例数量</td>
+    <td>2</td>
+  </tr>
+</table>
+
+**请求示例**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>account</td>
+    <td>LTAI5tAWAM</td>
+  </tr>
+  <tr>
+    <td>cluster_name</td>
+    <td>测试集群</td>
+  </tr>
+</table>
+
+**响应示例**
+
 正常返回结果：
+```JSON
 {
     "code":200,
     "data":{
@@ -3838,96 +3926,153 @@ cluster_name
     },
     "msg":"success"
 }
+```
 
 异常返回结果：
+```JSON
 {
     "code":400,
     "msg":"param_invalid",
     "data":null
 }
+```
 
-返回码解释
-返回码
-状态
-解释
-200
-success
-执行成功
-400
-param_invalid
-参数有误
+**返回码解释**
 
-
-
-
-费用API
-1. 单日使用机器总时长
-指定集群，返回特定集群的使用时长，否则返回当前账号下关联全部集群的总时长。
-GET方法
-GET /api/v1/instance/usage_total
-
-请求参数
-名称
-类型
-必填
-描述
-示例值
-cluster_name
-string
-否
-集群名
-gf.bridgx.online
-date
-string
-是
-yyyy-dd-mm
-2021-10-11
-
-返回参数
-名称
-类型
-必填
-描述
-示例值
-code
-int
-是
-返回码
- 0
-msg
-string
-是
-错误信息
-null
-data
-object
-是
-正常信息
- {}
-
-data 中的重要参数
-名称
-类型
-必填
-描述
-示例值
-usage_total
-int
-是
-使用时长单位秒
-1800
+<table>
+  <tr>
+    <td>返回码</td>
+    <td>状态</td>
+    <td>解释</td>
+  </tr>
+  <tr>
+    <td>200</td>
+    <td>success</td>
+    <td>执行成功</td>
+  </tr>
+  <tr>
+    <td>400</td>
+    <td>param_invalid</td>
+    <td>参数有误</td>
+  </tr>
+</table>
 
 
-请求实例:
-名称
-示例值
-cluster_name
-gf.bridgx.online
-date
-2021-10-11
 
+
+## 费用API
+### 1. 单日使用机器总时长
+指定集群，返回特定集群的使用时长，否则返回当前账号下关联全部集群的总时长。<br>
+**请求地址**
+<table>
+  <tr>
+    <td>GET方法</td>
+  </tr>
+  <tr>
+    <td>GET /api/v1/instance/usage_total</td>
+  </tr>
+</table>
+
+**请求参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>cluster_name</td>
+    <td>String</td>
+    <td>否</td>
+    <td>集群名</td>
+    <td>gf.bridgx.online</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>String</td>
+    <td>是</td>
+    <td>yyyy-dd-mm</td>
+    <td>2021-10-11</td>
+  </tr>
+</table>
+
+**返回参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>code</td>
+    <td>int</td>
+    <td>是</td>
+    <td>返回码</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>msg</td>
+    <td>string</td>
+    <td>是</td>
+    <td>错误信息</td>
+    <td>null</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>object</td>
+    <td>是</td>
+    <td>正常信息</td>
+    <td> {}</td>
+  </tr>
+</table>
+
+
+**data 中的重要参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>usage_total</td>
+    <td>int</td>
+    <td>是</td>
+    <td>使用时长单位秒</td>
+    <td>1800</td>
+  </tr>
+</table>
+
+**请求示例**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>cluster_name</td>
+    <td>gf.bridgx.online</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>2021-10-11</td>
+  </tr>
+  <tr>
+    <td>page_size</td>
+    <td>15</td>
+  </tr>
+</table>
+
+**响应示例**
 
 正常返回结果:
+```JSON
 {
     "code": 200,
     "msg": "success",
@@ -3935,147 +4080,222 @@ date
         "usage_total": 1800, // 表示1800s
     }
 }
-
+```
 异常返回结果：
+```JSON
 {
     "code":400,
     "msg":"param_invalid",
     "data":null
 }
+```
 
-返回码解释
-返回码
-状态
-解释
-200
-success
-执行成功
-400
-param_invalid
-参数有误
+**返回码解释**
 
-
-
-
-
-2. 单日使用机器时长明细 
-GET方法
-GET /api/v1/instance/usage_statistics
-
-请求参数:
-名称
-类型
-必填
-描述
-示例值
-cluster_name
-string
-否
-集群名
-gf.bridgx.online
-date
-string
-是
-yyyy-dd-mm
-2021-10-11
-page_number
-int32
-否
-默认第一页
-1
-page_size
-int32
-否
-默认 10 最大 50
-15
-
-返回参数
-名称
-类型
-必填
-描述
-示例值
-code
-int
-是
-返回码
- 0
-msg
-string
-是
-错误信息
-null
-data
-object
-是
-正常信息
- {}
-
-data 中的参数
-名称
-子属性
-类型
-描述
-示例值
-instance_list
-
-[]
+<table>
+  <tr>
+    <td>返回码</td>
+    <td>状态</td>
+    <td>解释</td>
+  </tr>
+  <tr>
+    <td>200</td>
+    <td>success</td>
+    <td>执行成功</td>
+  </tr>
+  <tr>
+    <td>400</td>
+    <td>param_invalid</td>
+    <td>参数有误</td>
+  </tr>
+</table>
 
 
+## 2. 单日使用机器时长明细 
 
-id
-string
-序号
-1
+**请求地址**
+<table>
+  <tr>
+    <td>GET方法</td>
+  </tr>
+  <tr>
+    <td>GET /api/v1/instance/usage_statistics</td>
+  </tr>
+</table>
 
-cluster_name
-string
-集群名
-gf.bridgx.online
+**请求参数**
 
-instance_id
-string
-yyyy-dd-mm
-2021-10-11
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>cluster_name</td>
+    <td>String</td>
+    <td>否</td>
+    <td>集群名</td>
+    <td>gf.bridgx.online</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>String</td>
+    <td>是</td>
+    <td>yyyy-dd-mm</td>
+    <td>2021-10-11</td>
+  </tr>
+  <tr>
+    <td>page_number</td>
+    <td>int32</td>
+    <td>否</td>
+    <td>默认第一页</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>page_size</td>
+    <td>int32</td>
+    <td>否</td>
+    <td>默认 10 最大 50</td>
+    <td>15</td>
+  </tr>
+</table>
 
-startup_at
-string
-开机时间
-2021-11-11 15:15:20
+**返回参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>类型</td>
+    <td>必填</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>code</td>
+    <td>int</td>
+    <td>是</td>
+    <td>返回码</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td>msg</td>
+    <td>string</td>
+    <td>是</td>
+    <td>错误信息</td>
+    <td>null</td>
+  </tr>
+  <tr>
+    <td>data</td>
+    <td>object</td>
+    <td>是</td>
+    <td>正常信息</td>
+    <td> {}</td>
+  </tr>
+</table>
 
-shutdown_at
-string
-关机时间
-2021-11-11 15:45:20
+**data 中的参数**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>子属性</td>
+    <td>类型</td>
+    <td>描述</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>instance_list</td>
+    <td></td>
+    <td>[]</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>id</td>
+    <td>string</td>
+    <td>序号</td>
+    <td>1</td>
+  </tr>
+    <td></td>
+    <td>cluster_name</td>
+    <td>string</td>
+    <td>集群名</td>
+    <td>gf.bridgx.online</td>
+  </tr>
+  </tr>
+    <td></td>
+    <td>instance_id</td>
+    <td>string</td>
+    <td>yyyy-dd-mm</td>
+    <td>2021-10-11</td>
+  </tr>
+  </tr>
+    <td></td>
+    <td>startup_at</td>
+    <td>string</td>
+    <td>开机时间</td>
+    <td>2021-11-11 15:15:20</td>
+  </tr>
+  </tr>
+    <td></td>
+    <td>shutdown_at</td>
+    <td>string</td>
+    <td>开机时间</td>
+    <td>2021-11-11 15:45:20</td>
+  </tr>
+  </tr>
+    <td></td>
+    <td>startup_time</td>
+    <td>int</td>
+    <td>机器服务时长，单位：秒</td>
+    <td>1800</td>
+  </tr>
+  </tr>
+    <td></td>
+    <td>instance_type</td>
+    <td>string</td>
+    <td>机器类型</td>
+    <td>esc.c6.large</td>
+  </tr>
+  </tr>
+    <td>pager</td>
+    <td></td>
+    <td>分页信息</td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-startup_time
-int
-机器服务时长，单位：秒
-1800
+**请求示例**
+<table>
+  <tr>
+    <td>名称</td>
+    <td>示例值</td>
+  </tr>
+  <tr>
+    <td>cluster_name</td>
+    <td>gf.bridgx.online</td>
+  </tr>
+  <tr>
+    <td>date</td>
+    <td>2021-10-11</td>
+  </tr>
+  <tr>
+    <td>page_number</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td>page_size</td>
+    <td>15</td>
+  </tr>
+</table>
 
-instance_type
-string
-机器类型
-esc.c6.large
-pager
-
-
-分页信息
-
-
-请求实例
-名称
-示例值
-cluster_name
-gf.bridgx.online
-date
-2021-10-11
-page_number
-1
-page_size
-15
+**响应示例**
 
 正常返回结果:
+```JSON
 {
     "code":200,
     "data":{
@@ -4116,25 +4336,34 @@ page_size
     },
     "msg":"success"
 }
-
+```
 异常返回结果：
+```JSON
 {
     "code":400,
     "msg":"param_invalid",
     "data":null
 }
+```
+**返回码解释**
 
-返回码解释
-返回码
-状态
-解释
-200
-success
-执行成功
-400
-param_invalid
-参数有误
-
+<table>
+  <tr>
+    <td>返回码</td>
+    <td>状态</td>
+    <td>解释</td>
+  </tr>
+  <tr>
+    <td>200</td>
+    <td>success</td>
+    <td>执行成功</td>
+  </tr>
+  <tr>
+    <td>400</td>
+    <td>param_invalid</td>
+    <td>参数有误</td>
+  </tr>
+</table> 
 
 
 
