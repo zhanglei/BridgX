@@ -3594,25 +3594,22 @@ enterprise：企业安全组</td>
     <td>创建时间</td>
     <td>2021-10-29 16：23：24</td>
   </tr>
+  <tr>
+    <td>image_id</td>
+    <td>String</td>
+    <td>是</td>
+    <td>镜像id</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>instance_type</td>
+    <td>String</td>
+    <td>是</td>
+    <td>实例规格</td>
+    <td>4核16G</td>
+  </tr>
 </table>
 
-
-
-
-image_id
-
-
-String
-是
-镜像id
-
-instance_type
-
-
-String
-是
-实例规格
-4核16G
 storage_config
 
 
