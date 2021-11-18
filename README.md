@@ -67,4 +67,4 @@ http://localhost:8888 可以看到管理控制台界面,初始用户名root和�
 #授权
 -----
 
-BridgX使用[Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)授权协议进行授权
+BridgX使用[Apache License 2.0](https://github.com/galaxy-future/BridgX/blob/master/LICENSE)授权协议进行授权
