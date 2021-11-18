@@ -64,7 +64,7 @@ http://localhost:8888 可以看到管理控制台界面,初始用户名root和�
 ------
 [贡献者公约](https://github.com/galaxy-future/BridgX/blob/master/CODE_OF_CONDUCT)
 
-#授权
+授权
 -----
 
 BridgX使用[Apache License 2.0](https://github.com/galaxy-future/BridgX/blob/master/LICENSE)授权协议进行授权
