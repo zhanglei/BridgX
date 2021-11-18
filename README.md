@@ -62,7 +62,7 @@ http://localhost:8888 可以看到管理控制台界面,初始用户名root和�
 
 行为准则
 ------
-[贡献者公约](https://github.com/galaxy-future/BridgX/blob/main/CODE_OF_CONDUCT)
+[贡献者公约](https://github.com/galaxy-future/BridgX/blob/master/CODE_OF_CONDUCT)
 
 #授权
 -----
