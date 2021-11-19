@@ -1,4 +1,4 @@
-![z备份 6](https://user-images.githubusercontent.com/94337797/142600082-09cf0c1e-056e-4efb-b6c9-c0c2b7744be0.png)
+![z备份 12](https://user-images.githubusercontent.com/94337797/142638151-d38ff88d-e2ad-427d-bef5-2c0345557920.png)
 ======
 
 BridgX是业界领先的基于全链路Serverless技术的云原生基础架构解决方案，目标是让开发者可以以开发单机应用系统的方式，开发跨云分布式应用系统，在不增加操作复杂度的情况下，兼得云计算的可扩展性和弹性伸缩等好处。将使企业用云成本减少50%以上，研发效率提升10倍。
