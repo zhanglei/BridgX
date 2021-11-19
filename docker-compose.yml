@@ -1,21 +1,21 @@
 version: '3'
 
 networks:
-  dev:
+  bridgx_net:
 
 services:
-
   #######################  mariadb  ########################
   mysql:
     container_name: mariadb-server
     image: yobasystems/alpine-mariadb:10.5.11
+    network_mode: "host"
     environment:
       MYSQL_ROOT_PASSWORD: mtQ8chN2
       MYSQL_DATABASE: bridgx
       MYSQL_USER: gf
       MYSQL_PASSWORD: db@galaxy-future.com
-    ports:
-      - 3306:3306
+    #    ports:
+    #      - 3306:3306
     volumes:
       - ./init/mysql:/docker-entrypoint-initdb.d/
     restart: always
@@ -24,31 +24,37 @@ services:
   etcd:
     container_name: etcd-server
     image: bitnami/etcd:3
+    network_mode: "host"
     restart: always
     environment:
       - ALLOW_NONE_AUTHENTICATION=yes
       - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
-    ports:
-      - 2379:2379
-      - 2380:2380
+  #    ports:
+  #      - 2379:2379
+  #      - 2380:2380
 
   #######################  bridgx 1.0  ########################
   app:
     container_name: gf-bridgx-api
+    network_mode: "host"
     build:
       context: .
       dockerfile: ./API.Dockerfile
-    ports:
-      - "9090:9090"
+    #    ports:
+    #      - "9090:9090"
+    command: [ "bin/wait-for-app.sh" ]
     depends_on:
       - mysql
       - etcd
 
   scheduler:
     container_name: gf-bridgx-scheduler
+    network_mode: "host"
     build:
       context: .
       dockerfile: ./SCHEDULER.Dockerfile
+    #    command: [ "bin/wait-for-it.sh", "127.0.0.1:3306", "--", "/bin/sh","/home/tiger/run_scheduler.sh" ]
+    command: [ "bin/wait-for-scheduler.sh" ]
     depends_on:
       - mysql
       - etcd

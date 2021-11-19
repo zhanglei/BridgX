@@ -28,6 +28,9 @@ COPY go.sum go.sum
 
 RUN mkdir -p output/conf output/bin
 
+# detect mysql start
+COPY wait-for-scheduler.sh output/bin/wait-for-scheduler.sh
+
 RUN find conf/ -type f ! -name "*_local.*" | xargs -I{} cp {} output/conf/
 RUN cp scripts/run_scheduler.sh output/
 
@@ -44,13 +47,17 @@ RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main/" > /etc/apk/repo
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone
 ENV TZ Asia/Shanghai
+
+RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.4/main/" > /etc/apk/repositories && \
+        apk add --no-cache bash
+
 ENV ServiceName=gf.bridgx.scheduler
 ENV SpecifiedConfig=prod
 
 COPY --from=builder /home/scheduler /home/tiger/scheduler
 RUN addgroup -S tiger && adduser -S tiger -G tiger
 WORKDIR /home/tiger/scheduler
-RUN chown -R tiger:tiger /home/tiger && chmod +x run_scheduler.sh
+RUN chown -R tiger:tiger /home/tiger && chmod +x run_scheduler.sh && chmod +x bin/wait-for-scheduler.sh
 
 USER tiger
 CMD ["/bin/sh","/home/tiger/scheduler/run_scheduler.sh"]
