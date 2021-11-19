@@ -14,13 +14,14 @@ import (
 
 //InstanceCleaner 负责定时扫描云厂商由于系统异常创建的实例，并释放这部分实例
 type InstanceCleaner struct {
-	clusterName string
-	VersionNo   *atomic.String
+	clusterName  string
+	VersionNo    *atomic.String
+	LockerClient *clients.EtcdClient
 }
 
 func (cleaner *InstanceCleaner) Run() {
 	recycleCount := 0
-	err := clients.SyncRun(constants.DefaultCleanMaxRunningTTL, constants.GetClusterScheduleLockKey(cleaner.clusterName), func() error {
+	err := cleaner.LockerClient.SyncRun(constants.DefaultCleanMaxRunningTTL, constants.GetClusterScheduleLockKey(cleaner.clusterName), func() error {
 		cluster, err := model.GetByClusterName(cleaner.clusterName)
 		if err != nil {
 			return err

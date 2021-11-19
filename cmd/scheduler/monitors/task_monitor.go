@@ -15,6 +15,7 @@ import (
 )
 
 type TaskMonitor struct {
+	LockerClient *clients.EtcdClient
 }
 
 func (m TaskMonitor) Run() {
@@ -27,7 +28,7 @@ func (m TaskMonitor) Run() {
 
 	for _, task := range tasks {
 		//err := tryRunTask(task)
-		err := clients.SyncRun(constants.DefaultTaskMonitorInterval, constants.TaskMonitorETCDLockKeyPrefix+strconv.FormatInt(task.Id, 10), func() error {
+		err := m.LockerClient.SyncRun(constants.DefaultTaskMonitorInterval, constants.TaskMonitorETCDLockKeyPrefix+strconv.FormatInt(task.Id, 10), func() error {
 			return scheduleTask(task)
 		})
 		if err != nil && err != clients.ErrReviewFailed && err != concurrency.ErrLocked {

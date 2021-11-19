@@ -18,14 +18,15 @@ import (
 
 //InstanceCountWatchJob 负责监控一个cluster是否有变更，如果有变更会schedule一个任务，保证需求可以满足
 type InstanceCountWatchJob struct {
-	ClusterName string
-	VersionNo   *atomic.String
+	ClusterName  string
+	VersionNo    *atomic.String
+	LockerClient *clients.EtcdClient
 	sync.Mutex
 }
 
 func (m *InstanceCountWatchJob) Run() {
 	syncKey := constants.GetClusterScheduleLockKey(m.ClusterName)
-	err := clients.SyncRun(constants.DefaultInstanceCountWatcherInterval, syncKey, func() error {
+	err := m.LockerClient.SyncRun(constants.DefaultInstanceCountWatcherInterval, syncKey, func() error {
 		return scheduleJob(m.ClusterName)
 	})
 	if err != nil && err != concurrency.ErrLocked {
